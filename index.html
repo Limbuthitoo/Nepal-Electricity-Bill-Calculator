@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Electricity Billing System</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Electircity Bill Calculator</h1>
+        <p>Calculate your electricity bill readings..</p>
+      </header>
+      <div class="inputs">
+        <form name="my-form" action="" method="post">
+          <select name="ampere">
+            <option value="">Select Your Ampere</option>
+            <option value="5Ampere">5 Ampere</option>
+            <option value="15Ampere">15 Ampere</option>
+            <option value="30Ampere">30 Ampere</option>
+            <option value="60Ampere">60 Ampere</option>
+          </select>
+        </form>
+
+        <input
+          id="previousReading"
+          type="text"
+          placeholder="Enter Your Previous Reading"
+        />
+        <input
+          id="currentReading"
+          type="text"
+          placeholder="Enter Your Current Reading"
+        />
+
+        <p>
+          Your this month unit reading is <span id="unit-info">OOO units</span>
+        </p>
+        <button id="click">Generate Your Bill</button>
+      </div>
+      <p class="bill-info">
+        Your current electricity bill is <span id="bill-info">Rs 0000</span>
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
