@@ -41,6 +41,7 @@ p span {
   background: white;
   border-radius: 5px;
   padding: 20px 25px 15px;
+  box-shadow: 5px 5px 5px rgb(0 0 0 / 0.2);
 }
 header h1 {
   font-size: 35px;
@@ -95,6 +96,7 @@ header p {
   font-weight: normal;
   font-size: 25px;
   color: #fff;
+  box-shadow: 3px 3px 3px rgb(0 0 0/0.3);
   background: rgb(61, 174, 232);
   background: -moz-linear-gradient(
     90deg,
@@ -125,4 +127,50 @@ header p {
   padding-top: 15px;
   color: rgb(14, 107, 150);
   font-weight: bold;
+}
+@keyframes linearGradient {
+  0% {
+    background: rgb(229, 194, 253);
+  }
+  25% {
+    background: rgb(210, 143, 255);
+  }
+  50% {
+    background: rgb(185, 81, 255);
+  }
+  75% {
+    background: rgb(162, 23, 255);
+  }
+  100% {
+    background: rgb(108, 0, 180);
+  }
+}
+button:hover {
+  animation: linearGradient 250ms;
+  background: rgb(108, 0, 180);
+}
+
+button:active {
+  box-shadow: none;
+  color: black;
+  background: rgb(60, 190, 255);
+  background: -moz-linear-gradient(
+    90deg,
+    rgb(66, 192, 255) 0%,
+    rgb(173, 221, 255) 47%,
+    rgb(80, 217, 255) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgb(85, 198, 255) 0%,
+    rgb(166, 218, 255) 47%,
+    rgb(93, 220, 255) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgb(132, 214, 255) 0%,
+    rgb(161, 216, 255) 47%,
+    rgb(86, 218, 255) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3daff8",endColorstr="#02ffbf",GradientType=0.5);
 }
